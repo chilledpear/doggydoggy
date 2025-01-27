@@ -15,8 +15,9 @@ html, body {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
+    padding-top: 20px;
 }
 
 .container {
@@ -24,12 +25,34 @@ body {
     max-width: 800px;
     padding: 20px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image-text {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
+}
+
+.contract-text {
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-top: 5px;
 }
 
 .image-box {
-    position: relative;
     width: 100%;
-    margin-bottom: 30px;
+    margin: 0 auto;
 }
 
 .center-image {
@@ -40,32 +63,6 @@ body {
     border-radius: 5px;
     display: block;
     margin: 0 auto;
-}
-
-.title-container {
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    text-align: center;
-    width: 100%;
-}
-
-.image-text {
-    font-size: 60px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    pointer-events: none;
-}
-
-.contract-text {
-    font-size: 18px;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    margin-top: 10px;
-    pointer-events: none;
 }
 
 .chat-box {
@@ -126,8 +123,13 @@ body {
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
+    body {
+        padding-top: 10px;
+    }
+
     .container {
         padding: 15px;
+        gap: 15px;
     }
 
     .image-text {
@@ -146,6 +148,7 @@ body {
 @media screen and (max-width: 480px) {
     .container {
         padding: 10px;
+        gap: 10px;
     }
 
     .image-text {
