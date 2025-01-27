@@ -15,7 +15,7 @@ function sendMessage() {
         document.getElementById("user-input").value = "";
 
         fetchChatGPTResponse(userInput).then((response) => {
-            displayMessage("Oriental Language Model", response); // Changed from "DLM" to "DeepSeek"
+            displayMessage("Ling Ling Language Model", response); // Changed from "DLM" to "DeepSeek"
         });
     }
 }
@@ -23,7 +23,7 @@ function sendMessage() {
 function displayMessage(sender, message) {
     const chatDisplay = document.getElementById("chat-display");
     const messageElement = document.createElement("div");
-    sender = sender === "DLM" ? "Oriental Language Model" : sender;
+    sender = sender === "DLM" ? "Ling Ling Language Model" : sender;
     messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
     messageElement.style.marginBottom = "15px"; // Add spacing between messages
     chatDisplay.appendChild(messageElement);
