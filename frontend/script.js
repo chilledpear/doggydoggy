@@ -11,11 +11,11 @@ document.getElementById("send-btn").addEventListener("click", () => {
 function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (userInput.trim() !== "") {
-        displayMessage("User", userInput);
+        displayMessage("American", userInput);
         document.getElementById("user-input").value = "";
 
         fetchChatGPTResponse(userInput).then((response) => {
-            displayMessage("DLM", response);
+            displayMessage("Oriental Language Model", response); // Changed from "DLM" to "DeepSeek"
         });
     }
 }
@@ -23,14 +23,17 @@ function sendMessage() {
 function displayMessage(sender, message) {
     const chatDisplay = document.getElementById("chat-display");
     const messageElement = document.createElement("div");
+    sender = sender === "DLM" ? "Oriental Language Model" : sender;
     messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    messageElement.style.marginBottom = "15px"; // Add spacing between messages
     chatDisplay.appendChild(messageElement);
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
 }
 
 async function fetchChatGPTResponse(userInput) {
     try {
-        const response = await fetch('/api/chat', {
+        const baseUrl = window.location.origin;
+        const response = await fetch(`${baseUrl}/api/chat`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -46,6 +49,6 @@ async function fetchChatGPTResponse(userInput) {
         return data.response;
     } catch (error) {
         console.error('Error:', error);
-        return 'Try again gringo';
+        return 'Sorry, there was an error processing your request. Please try again.';
     }
 }

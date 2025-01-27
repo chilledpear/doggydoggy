@@ -97,3 +97,8 @@ body {
     z-index: 10; /* Ensures the text appears above the image */
     pointer-events: none; /* Prevents the text from interfering with clicks on the image */
 }
+
+.chat-display > div {
+    margin-bottom: 15px;
+    padding: 8px 0;
+}
