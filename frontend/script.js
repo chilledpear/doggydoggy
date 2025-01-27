@@ -50,6 +50,6 @@ async function fetchChatGPTResponse(userInput) {
         return data.response;
     } catch (error) {
         console.error('Detailed error:', error); // More detailed error
-        return `Error: ${'Try again gringo'}`; // Return actual error message instead of "Try again gringo"
+        return `Error: ${error.message}`; // Return actual error message instead of "Try again gringo"
     }
 }
