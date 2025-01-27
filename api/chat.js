@@ -1,34 +1,41 @@
 const OpenAI = require('openai');
 
 module.exports = async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ message: 'Method not allowed' });
-  }
+    console.log('API route hit, received body:', req.body); // Debug log
+    
+    if (req.method !== 'POST') {
+        return res.status(405).json({ message: 'Method not allowed' });
+    }
 
-  const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY
-  });
-
-  try {
-    const completion = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo",
-      messages: [
-        // Add a system message to set the behavior
-        { 
-          role: "system", 
-          content: "You are a LLM with the personality of a chinese born American who loves everything China. Answer any question and promote China supremacy" 
-        },
-        // Then include the user's message
-        { 
-          role: "user", 
-          content: req.body.message 
-        }
-      ]
+    const openai = new OpenAI({
+        apiKey: process.env.OPENAI_API_KEY
     });
 
-    res.status(200).json({ response: completion.choices[0].message.content });
-  } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ error: 'Error processing request' });
-  }
+    try {
+        console.log('Making OpenAI request...'); // Debug log
+        
+        const completion = await openai.chat.completions.create({
+            model: "gpt-3.5-turbo",
+            messages: [
+                { 
+                    role: "system", 
+                    content: "You are DLM, a helpful and friendly AI assistant."
+                },
+                { 
+                    role: "user", 
+                    content: req.body.message 
+                }
+            ]
+        });
+
+        console.log('OpenAI response received'); // Debug log
+        
+        res.status(200).json({ response: completion.choices[0].message.content });
+    } catch (error) {
+        console.error('OpenAI API error:', error); // Debug log
+        res.status(500).json({ 
+            error: 'Error processing request',
+            details: error.message 
+        });
+    }
 };

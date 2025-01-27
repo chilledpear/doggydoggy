@@ -27,6 +27,8 @@ function displayMessage(sender, message) {
 
 async function fetchChatGPTResponse(userInput) {
     try {
+        console.log('Sending request with input:', userInput); // Debug log
+        
         const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
@@ -35,15 +37,19 @@ async function fetchChatGPTResponse(userInput) {
             body: JSON.stringify({ message: userInput })
         });
 
+        console.log('Response status:', response.status); // Debug log
+
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorText = await response.text();
+            console.log('Error response:', errorText); // Debug log
+            throw new Error(`HTTP error! status: ${response.status}, details: ${errorText}`);
         }
         
         const data = await response.json();
-        console.log('Response data:', data); // Add this for debugging
+        console.log('Response data:', data); // Debug log
         return data.response;
     } catch (error) {
-        console.error('Error:', error);
-        return 'Try again gringo';
+        console.error('Detailed error:', error); // More detailed error
+        return `Error: ${'Try again gringo'}`; // Return actual error message instead of "Try again gringo"
     }
 }
