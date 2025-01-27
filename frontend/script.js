@@ -15,7 +15,7 @@ function sendMessage() {
         document.getElementById("user-input").value = "";
 
         fetchChatGPTResponse(userInput).then((response) => {
-            displayMessage("Ling Ling Language Model", response); // Changed from "DLM" to "DeepSeek"
+            displayMessage("Ling Ling Language Model", response);
         });
     }
 }
@@ -25,7 +25,6 @@ function displayMessage(sender, message) {
     const messageElement = document.createElement("div");
     sender = sender === "DLM" ? "Ling Ling Language Model" : sender;
     messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
-    messageElement.style.marginBottom = "15px"; // Add spacing between messages
     chatDisplay.appendChild(messageElement);
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
 }
@@ -49,6 +48,6 @@ async function fetchChatGPTResponse(userInput) {
         return data.response;
     } catch (error) {
         console.error('Error:', error);
-        return 'Sorry, there was an error processing your request. Please try again.';
+        return 'Try again gringo';
     }
 }
