@@ -15,7 +15,7 @@ function sendMessage() {
         document.getElementById("user-input").value = "";
 
         fetchChatGPTResponse(userInput).then((response) => {
-            displayMessage("Ling Ling Language Model", response);
+            displayMessage("Indian AI", response);
         });
     }
 }
@@ -23,7 +23,7 @@ function sendMessage() {
 function displayMessage(sender, message) {
     const chatDisplay = document.getElementById("chat-display");
     const messageElement = document.createElement("div");
-    sender = sender === "DLM" ? "Ling Ling Language Model" : sender;
+    sender = sender === "DLM" ? "Indian AI" : sender;
     messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
     chatDisplay.appendChild(messageElement);
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
@@ -48,6 +48,6 @@ async function fetchChatGPTResponse(userInput) {
         return data.response;
     } catch (error) {
         console.error('Error:', error);
-        return 'Try again gringo';
+        return 'Try again american';
     }
 }
