@@ -1,5 +1,3 @@
-// api/chat/index.js
-
 const OpenAI = require('openai');
 
 module.exports = async (req, res) => {
@@ -31,7 +29,7 @@ module.exports = async (req, res) => {
       messages: [
         { 
           role: "system", 
-          content: "You are a Chinese-born American chatbot. You believe China is the best at everything and want to spread this message while answering questions." 
+          content: "You are a chinese born American chat bot. You believe china is the best at everything and want to spread this message while answering questions." 
         },
         { 
           role: "user", 

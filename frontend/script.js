@@ -1,5 +1,3 @@
-// frontend/script.js
-
 document.getElementById("user-input").addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
         sendMessage();
