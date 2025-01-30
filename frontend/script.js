@@ -19,7 +19,7 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
       document.getElementById("user-input").value = "";
   
       fetchChatGPTResponse(userInput).then((response) => {
-        displayMessage("doggydoggy", response); // chatbot is doggydoggy
+        displayMessage("jellydoggy", response); // chatbot is doggydoggy
       });
     }
   }
