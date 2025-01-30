@@ -1,30 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doggy-My-Doggy Chat</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doggy-My-Doggy Chat</title>
+  
+  <!-- FAVICON (Light Mode by default) -->
+  <!-- Replace `fav-light.png` with your actual light-mode favicon file -->
+  <link id="favicon" rel="icon" type="image/png" href="fav-light.png" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="container">
-        <div class="title-container">
-            <div class="image-text">$DOGGY-MY-DOGGY</div>
-            <div class="image-text2">Man's Best Friend Strikes Back</div>
-            <div class="contract-text">Contract Address: ABCD1234DoggyMyDoggyTokenXYZ
-            </div>
-        </div>
-        <div class="image-box">
-            <img src="doggy.jpg" alt="Doggy-My-Doggy Logo" class="center-image">
-        </div>
-        <div class="chat-box">
-            <div id="chat-display" class="chat-display"></div>
-            <div class="input-container">
-                <input type="text" id="user-input" placeholder="Type your message..." />
-                <button id="send-btn">Send</button>
-            </div>
-        </div>
+<body class="light-mode">
+  <div class="container">
+    <!-- THEME TOGGLE BUTTON -->
+    <button id="theme-toggle-btn" class="theme-toggle-btn">Toggle Dark Mode</button>
+
+    <div class="title-container">
+      <div class="image-text">$DOGGY-MY-DOGGY</div>
+      <div class="image-text2">Man's Best Friend Strikes Back</div>
+      <div class="contract-text">
+        Contract Address: ABCD1234DoggyMyDoggyTokenXYZ
+      </div>
     </div>
-    <script src="script.js"></script>
+
+    <!-- CENTER IMAGE (changes on dark mode) -->
+    <!-- Replace `doggy-light.jpg` and `doggy-dark.jpg` with your actual images -->
+    <div class="image-box">
+      <img
+        id="center-image"
+        src="doggy-light.jpg"
+        alt="Doggy-My-Doggy Logo"
+        class="center-image"
+      />
+    </div>
+
+    <!-- CHAT BOX SECTION -->
+    <div class="chat-box">
+      <div id="chat-display" class="chat-display"></div>
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+
+    <!-- NEW SECTIONS BELOW THE CHAT (Suggestions #3 & #6) -->
+    <div class="info-sections">
+      <!-- About / “What is doggy-my-doggy?” -->
+      <section class="about">
+        <h2>What is Doggy-My-Doggy?</h2>
+        <p>
+          Doggy-My-Doggy is the memecoin barking up the right tree! Built to
+          celebrate man’s best friend while offering robust crypto tokenomics,
+          it’s a fun and rewarding way to join the next generation of dog-themed
+          projects. 
+        </p>
+      </section>
+
+      <!-- Tokenomics / Roadmap -->
+      <section class="tokenomics">
+        <h2>Tokenomics &amp; Roadmap</h2>
+        <p>
+          <strong>Total Supply:</strong> 1,000,000,000 DOGGY<br />
+          <strong>Initial Liquidity:</strong> locked<br />
+          <strong>Community Rewards:</strong> 20%<br />
+      </section>
+    </div>
+
+    <!-- SOCIAL LINKS (Suggestion #4) -->
+    <div class="social-links">
+      <!-- Replace # with your actual URLs and images -->
+      <a href="https://t.me/YourTelegram" target="_blank">
+        <img src="telegram-logo.png" alt="Telegram" />
+      </a>
+      <a href="https://twitter.com/YourTwitter" target="_blank">
+        <img src="twitter-logo.png" alt="Twitter" />
+      </a>
+      <a href="https://dexscreener.com/YourCoin" target="_blank">
+        <img src="dexscreener-logo.png" alt="Dexscreener" />
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
