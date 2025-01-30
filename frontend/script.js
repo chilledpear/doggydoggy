@@ -11,11 +11,11 @@ document.getElementById("send-btn").addEventListener("click", () => {
 function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (userInput.trim() !== "") {
-        displayMessage("American", userInput);
+        displayMessage("Non-Dog-Entity", userInput);
         document.getElementById("user-input").value = "";
 
         fetchChatGPTResponse(userInput).then((response) => {
-            displayMessage("Indian AI", response);
+            displayMessage("Doggy-My-Doggy AI", response);
         });
     }
 }
@@ -23,7 +23,6 @@ function sendMessage() {
 function displayMessage(sender, message) {
     const chatDisplay = document.getElementById("chat-display");
     const messageElement = document.createElement("div");
-    sender = sender === "DLM" ? "Indian AI" : sender;
     messageElement.innerHTML = `<strong>${sender}:</strong> ${message}`;
     chatDisplay.appendChild(messageElement);
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
@@ -48,6 +47,6 @@ async function fetchChatGPTResponse(userInput) {
         return data.response;
     } catch (error) {
         console.error('Error:', error);
-        return 'Try again american';
+        return 'Unable to fetch a response at this time. Please try again.';
     }
 }
