@@ -59,7 +59,8 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
     Toggle Dark Mode 
     - Switch body class from light-mode <-> dark-mode
     - Switch center image from doggy-light.jpg <-> doggy-dark.jpg
-    - Optionally switch favicon from fav-light.png <-> fav-dark.png
+    - Switch favicon from fav-light.png <-> fav-dark.png
+    - Cursor changes automatically via CSS
   */
   function toggleDarkMode() {
     const body = document.body;
