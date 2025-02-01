@@ -6,6 +6,9 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
   
   document.getElementById("send-btn").addEventListener("click", sendMessage);
   
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  themeToggleBtn.addEventListener("click", toggleDarkMode);
+  
   function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (userInput.trim() !== "") {
@@ -45,7 +48,24 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
       return data.response;
     } catch (error) {
       console.error('Error:', error);
-      return 'Not very Jelly of You';
+      return 'Not very Jelly of you';
+    }
+  }
+  
+  function toggleDarkMode() {
+    const body = document.body;
+    const centerImage = document.getElementById("center-image");
+  
+    if (body.classList.contains("light-mode")) {
+      body.classList.remove("light-mode");
+      body.classList.add("dark-mode");
+      centerImage.src = "doggy-dark.jpg";
+      themeToggleBtn.textContent = "Toggle Light Mode";
+    } else {
+      body.classList.remove("dark-mode");
+      body.classList.add("light-mode");
+      centerImage.src = "doggy-light.jpg";
+      themeToggleBtn.textContent = "Toggle Dark Mode";
     }
   }
   

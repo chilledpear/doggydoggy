@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jelly Jelly Language Model</title>
   
-  <!-- Favicon (using the dark version since the site is dark-themed) -->
-  <link id="favicon" rel="icon" type="image/png" href="fav-dark.png" />
+  <!-- Updated favicon to use jellyfav.jpg -->
+  <link id="favicon" rel="icon" type="image/jpeg" href="jellyfav.jpg" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- TOP MENU (Slim bar with social links) -->
+<!-- Default to light mode -->
+<body class="light-mode">
+  <!-- TOP MENU: Slim bar with social links and toggle button -->
   <div class="slim-menu">
     <div class="social-links">
       <a href="https://t.me/doggymydoggy" target="_blank">
@@ -23,18 +25,22 @@
         <img src="dexscreener-logo.png" alt="Dexscreener">
       </a>
     </div>
+    <!-- Toggle Button -->
+    <button id="theme-toggle-btn" class="theme-toggle-btn">Toggle Dark Mode</button>
   </div>
 
   <div class="container">
     <div class="title-container">
       <div class="image-text">JELLY JELLY LANGUAGE MODEL</div>
-      <div class="image-text2">She's a girl made out of jelly – flexible, fun, and full of surprises.</div>
+      <div class="image-text2">
+        She's a girl made out of jelly – flexible, fun, and full of surprises.
+      </div>
       <div class="contract-text">
         Contract Address: coming soon
       </div>
     </div>
 
-    <!-- CENTER IMAGE: using doggy-light.jpg as the default main picture -->
+    <!-- CENTER IMAGE: uses doggy-light.jpg in light mode and doggy-dark.jpg in dark mode -->
     <div class="image-box">
       <img id="center-image" src="doggy-light.jpg" alt="Jelly Jelly" class="center-image">
     </div>
