@@ -14,14 +14,14 @@
   body.light-mode {
     background-color: #fff;
     color: #333;
-    cursor: url("bark-light.png"), auto;
+    cursor: url("dlm-cursor-light.png"), auto;
   }
   
   /* DARK MODE */
   body.dark-mode {
     background-color: #1a1717;
     color: #fff;
-    cursor: url("bark-dark.png"), auto;
+    cursor: url("dlm-cursor-dark.png"), auto;
   }
   
   /* SLIM MENU */
@@ -206,11 +206,5 @@
     .center-image {
       max-width: 200px;
     }
-  }
-  
-  /* TEMPORARILY HIDE TWITTER AND DEXSCREENER ICONS */
-  .social-links a[href*="x.com/doggymydog67769"],
-  .social-links a[href*="pump.fun/coin/8BbeDN4g4bgR6bxZrrB6PWoKZqRZKxNSLsoomZgYpump"] {
-    display: none;
   }
   

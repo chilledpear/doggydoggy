@@ -12,11 +12,11 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
   function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (userInput.trim() !== "") {
-      displayMessage("Non-Jelly Entity", userInput);
+      displayMessage("American", userInput);
       document.getElementById("user-input").value = "";
   
       fetchChatGPTResponse(userInput).then((response) => {
-        displayMessage("jellyjelly", response);
+        displayMessage("Non-Mexican Model", response);  // Chatbot persona: "dlm"
       });
     }
   }
@@ -48,7 +48,7 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
       return data.response;
     } catch (error) {
       console.error('Error:', error);
-      return 'Not very Jelly of you';
+      return 'Unable to fetch a response at this time. Please try again.';
     }
   }
   
@@ -59,12 +59,12 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
     if (body.classList.contains("light-mode")) {
       body.classList.remove("light-mode");
       body.classList.add("dark-mode");
-      centerImage.src = "doggy-dark.jpg";
+      centerImage.src = "dlm-dark.jpg";
       themeToggleBtn.textContent = "Toggle Light Mode";
     } else {
       body.classList.remove("dark-mode");
       body.classList.add("light-mode");
-      centerImage.src = "doggy-light.jpg";
+      centerImage.src = "dlm-light.jpg";
       themeToggleBtn.textContent = "Toggle Dark Mode";
     }
   }

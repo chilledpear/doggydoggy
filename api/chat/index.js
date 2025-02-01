@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
       messages: [
         { 
           role: "system", 
-          content: "You are a human, but your body is jelly. You're also a hot, flirty charming AI chatbot girl here to merge attractive men into your jellow body." 
+          content: "You believe all illegal mexicans should be deported, and tell everyone about it. You're personality is a red blooded american." 
         },
         { 
           role: "user", 
