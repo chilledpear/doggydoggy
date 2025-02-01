@@ -4,22 +4,16 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
     }
   });
   
-  document.getElementById("send-btn").addEventListener("click", () => {
-    sendMessage();
-  });
-  
-  // THEME TOGGLE:
-  const themeToggleBtn = document.getElementById("theme-toggle-btn");
-  themeToggleBtn.addEventListener("click", toggleDarkMode);
+  document.getElementById("send-btn").addEventListener("click", sendMessage);
   
   function sendMessage() {
     const userInput = document.getElementById("user-input").value;
     if (userInput.trim() !== "") {
-      displayMessage("Non-Dog Entity", userInput);
+      displayMessage("Non-Jelly Entity", userInput);
       document.getElementById("user-input").value = "";
   
       fetchChatGPTResponse(userInput).then((response) => {
-        displayMessage("jellydoggy", response); // chatbot is doggydoggy
+        displayMessage("jellyjelly", response);
       });
     }
   }
@@ -51,36 +45,7 @@ document.getElementById("user-input").addEventListener("keydown", (event) => {
       return data.response;
     } catch (error) {
       console.error('Error:', error);
-      return 'Unable to fetch a response at this time. Please try again.';
-    }
-  }
-  
-  /* 
-    Toggle Dark Mode 
-    - Switch body class from light-mode <-> dark-mode
-    - Switch center image from doggy-light.jpg <-> doggy-dark.jpg
-    - Switch favicon from fav-light.png <-> fav-dark.png
-    - Cursor changes automatically via CSS
-  */
-  function toggleDarkMode() {
-    const body = document.body;
-    const centerImage = document.getElementById("center-image");
-    const favicon = document.getElementById("favicon");
-  
-    if (body.classList.contains("light-mode")) {
-      body.classList.remove("light-mode");
-      body.classList.add("dark-mode");
-      // Switch to dark “evil” dog image
-      centerImage.src = "doggy-dark.jpg";
-      // Switch favicon to dark version
-      favicon.href = "fav-dark.png";
-    } else {
-      body.classList.remove("dark-mode");
-      body.classList.add("light-mode");
-      // Switch back to light image
-      centerImage.src = "doggy-light.jpg";
-      // Switch favicon to light version
-      favicon.href = "fav-light.png";
+      return 'Not very Jelly of You';
     }
   }
   
