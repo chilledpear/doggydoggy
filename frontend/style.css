@@ -208,3 +208,9 @@
     }
   }
   
+  /* TEMPORARILY HIDE TWITTER AND DEXSCREENER ICONS */
+  .social-links a[href*="x.com/doggymydog67769"],
+  .social-links a[href*="pump.fun/coin/8BbeDN4g4bgR6bxZrrB6PWoKZqRZKxNSLsoomZgYpump"] {
+    display: none;
+  }
+  
