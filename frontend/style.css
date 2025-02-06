@@ -13,6 +13,8 @@ html, body {
 /* LIGHT MODE (only mode) */
 body {
   background-color: #fff;
+  background-image: url("wallpaper.jpg");
+  background-repeat: repeat;
   color: #333;
   cursor: url("strategist-cursor-light.png"), auto;
 }
