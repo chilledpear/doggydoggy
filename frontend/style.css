@@ -18,7 +18,7 @@ body {
   background: url("wallpaper.jpg") repeat;
   background-size: auto;
   color: #333;
-  cursor: url("strategist-cursor-light.png"), auto;
+  cursor: url("kate-cursor.png"), auto;
 }
 
 /* Spotlight overlay element for the reveal effect */
@@ -94,7 +94,7 @@ body {
   -webkit-text-stroke: 0px;
 }
 .image-text2 {
-  font-size: 44px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
   -webkit-text-stroke: 0px;
@@ -242,10 +242,10 @@ body {
     font-size: 35px;  /* 30% smaller than 64px */
   }
   .image-text2 {
-    font-size: 25px;  /* 30% smaller than 44px */
+    font-size: 20px;  /* 30% smaller than 44px */
   }
   .contract-text {
-    font-size: 20px;  /* 30% smaller than 28px */
+    font-size: 18px;  /* 30% smaller than 28px */
   }
   
   /* Add a bit of extra spacing above the Kate AI button */
