@@ -239,10 +239,10 @@ body {
     padding-top: 0;
   }
   .image-text {
-    font-size: 45px;  /* 30% smaller than 64px */
+    font-size: 35px;  /* 30% smaller than 64px */
   }
   .image-text2 {
-    font-size: 31px;  /* 30% smaller than 44px */
+    font-size: 25px;  /* 30% smaller than 44px */
   }
   .contract-text {
     font-size: 20px;  /* 30% smaller than 28px */
@@ -251,12 +251,12 @@ body {
   /* Add a bit of extra spacing above the Kate AI button */
   .title-container a {
     display: inline-block;
-    margin-top: 4px;
+    margin-top: 6px;
   }
   
   /* Reduce video size by about 35% */
   .center-image {
-    max-width: 325px;  /* 35% smaller than 500px */
+    max-width: 250px;  /* 35% smaller than 500px */
     width: 95%;
   }
   
