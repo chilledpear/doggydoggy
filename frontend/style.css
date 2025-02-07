@@ -6,7 +6,7 @@
 }
 html, body {
   width: 100%;
-  min-height: 100vh; /* Ensure the background always extends at least the full viewport height */
+  min-height: 100vh; /* Ensure the background covers the full document height */
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   position: relative;
