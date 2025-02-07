@@ -8,15 +8,16 @@
   <!-- Favicon -->
   <link id="favicon" rel="icon" type="image/jpeg" href="strategist-favicon.jpg" />
   
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="light-mode">
-  <!-- The blurry background is applied via CSS on the body -->
-
-  <!-- Spotlight element for the reveal effect -->
-  <div id="spotlight"></div>
+  <!-- The background (wallpaper.jpg) is applied via CSS on the body -->
   
-  <!-- TOP MENU: Slim bar with social links -->
+  <!-- Clear overlay for the spotlight effect using reveal.png -->
+  <div id="clear-overlay"></div>
+  
+  <!-- TOP MENU -->
   <div class="slim-menu">
     <div class="social-links">
       <a href="https://www.businesswire.com/news/home/20250205834633/en/MicroStrategy-is-Now-Strategy" target="_blank">
@@ -30,7 +31,7 @@
       </a>
     </div>
   </div>
-
+  
   <div class="container">
     <div class="title-container">
       <div class="image-text">M16z</div>
@@ -39,7 +40,7 @@
         Contract Address: BfTjPuKUb4rdSBdYfKWVSxPB1sZ9u2bVv1QoBrjppump
       </div>
     </div>
-
+    
     <!-- CENTER VIDEO: kate.mp4 looping on repeat -->
     <div class="image-box">
       <video id="center-video" class="center-image" autoplay loop muted>
@@ -47,7 +48,7 @@
         Your browser does not support the video tag.
       </video>
     </div>
-
+    
     <!-- CHAT BOX SECTION -->
     <div class="chat-box">
       <div id="chat-display" class="chat-display"></div>
@@ -57,7 +58,7 @@
       </div>
     </div>
   </div>
-
+  
   <script src="script.js"></script>
 </body>
 </html>
