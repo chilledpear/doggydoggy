@@ -13,7 +13,7 @@ html, body {
 
 /* LIGHT MODE (only mode) */
 /* Use wallpaper.jpg as the blurry background.
-   (Ensure wallpaper.jpg is pre-blurred or apply a CSS filter if needed) */
+   Ensure wallpaper.jpg is pre-blurred or use CSS filter if needed */
 body {
   background: url("wallpaper.jpg") repeat;
   color: #333;
@@ -32,7 +32,14 @@ body {
   pointer-events: none;
   clip-path: circle(0px at 0 0);
   transition: clip-path 0.2s ease-out;
-  opacity: 0.9; /* adjust opacity for desired transparency */
+  opacity: 0.9;
+  z-index: 0;
+}
+
+/* Ensure main content appears above the reveal overlay */
+.container, .slim-menu {
+  position: relative;
+  z-index: 1;
 }
 
 /* TOP MENU */
@@ -73,9 +80,22 @@ body {
 .title-container {
   text-align: center;
 }
-.title-container .image-text,
-.title-container .image-text2,
-.title-container .contract-text {
+
+/* Adjust font sizes for hierarchy */
+.image-text {
+  font-size: 64px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.image-text2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.contract-text {
+  font-size: 32px;
   color: white;
   -webkit-text-stroke: 1px black;
 }
