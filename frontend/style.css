@@ -12,28 +12,29 @@ html, body {
 }
 
 /* LIGHT MODE */
-/* The blurry background wallpaper */
+/* Use wallpaper.jpg as the blurry background */
 body {
   background: url("wallpaper.jpg") repeat;
   color: #333;
   cursor: url("strategist-cursor-light.png"), auto;
 }
 
-/* Spotlight element that shows the clear image */
+/* Spotlight element for reveal effect */
 #spotlight {
   position: fixed;
-  width: 300px;              /* 2 x radius (here, 150px radius) */
+  width: 300px;  /* Diameter of spotlight (2 x radius) */
   height: 300px;
   border-radius: 50%;
   background: url("reveal.png") no-repeat center center;
   background-size: cover;
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0;  /* Initially hidden */
   transform: translate(-50%, -50%);
   z-index: 0;
+  transition: opacity 0.2s ease-out;
 }
 
-/* Main content placed above the spotlight */
+/* Ensure main content appears above the spotlight */
 .container, .slim-menu {
   position: relative;
   z-index: 1;
@@ -73,7 +74,7 @@ body {
   gap: 20px;
 }
 
-/* TITLE CONTAINER - white text with black stroke */
+/* TITLE CONTAINER - white text with a black stroke */
 .title-container {
   text-align: center;
 }
