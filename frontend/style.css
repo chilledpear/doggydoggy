@@ -12,10 +12,9 @@ html, body {
 }
 
 /* LIGHT MODE */
-/* wallpaper.jpg is used as the blurry background */
+/* Use wallpaper.jpg as the blurry background */
 body {
   background: url("wallpaper.jpg") repeat;
-  /* Default background-size for desktop (can be left as is or adjusted) */
   background-size: auto;
   color: #333;
   cursor: url("strategist-cursor-light.png"), auto;
@@ -31,8 +30,6 @@ body {
   pointer-events: none;
   z-index: 0;
 }
-
-/* The :before pseudo-element creates a circular window revealing the clear image */
 #spotlight:before {
   content: "";
   position: absolute;
@@ -85,26 +82,26 @@ body {
   gap: 20px;
 }
 
-/* TITLE CONTAINER - enlarged white text with black stroke */
+/* TITLE CONTAINER – enlarged white text without stroke */
 .title-container {
   text-align: center;
 }
 .image-text {
-  font-size: 60px;
+  font-size: 64px;
   font-weight: bold;
   color: white;
-  -webkit-text-stroke: 5px black;
+  -webkit-text-stroke: 0px;
 }
 .image-text2 {
-  font-size: 40px;
+  font-size: 44px;
   font-weight: bold;
   color: white;
-  -webkit-text-stroke: 4px black;
+  -webkit-text-stroke: 0px;
 }
 .contract-text {
-  font-size: 25px;
+  font-size: 28px;
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 0px;
 }
 
 /* IMAGE BOX */
@@ -147,8 +144,6 @@ body {
   border-radius: 4px;
   background-color: #eee;
 }
-
-/* INPUT CONTAINER */
 .input-container {
   display: flex;
   gap: 10px;
@@ -177,33 +172,49 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 480px) {
-  /* Make the wallpaper image appear smaller (more tiles) */
+  /* Adjust background so more tiles appear */
   body {
     background-size: 150px 150px;
   }
-  
-  /* Reduce title text sizes */
+  html, body {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  .container {
+    height: 100vh;
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .title-container {
+    margin-top: 5px;
+  }
+  /* Slightly reduce title text sizes on mobile */
   .image-text {
-    font-size: 40px;
-    -webkit-text-stroke: 3px black;
+    font-size: 56px;
   }
   .image-text2 {
-    font-size: 30px;
-    -webkit-text-stroke: 2px black;
+    font-size: 38px;
   }
   .contract-text {
-    font-size: 18px;
-    -webkit-text-stroke: 2px black;
+    font-size: 24px;
   }
-  
-  /* Make the video a bit bigger relative to the container */
+  .image-box {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .center-image {
-    max-width: 90%;  /* Use more of the container's width */
+    max-width: 95%;
   }
-  
-  /* Reduce chat-box size by about 20% */
   .chat-box {
-    max-width: 480px; /* 80% of original 600px */
-    padding: 16px;    /* reduce padding slightly */
+    max-width: 480px;
+    padding: 12px;
+    height: 140px;
+  }
+  .chat-display {
+    height: 70px;
   }
 }
