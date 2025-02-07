@@ -85,6 +85,7 @@ body {
 /* TITLE CONTAINER – enlarged white text without stroke */
 .title-container {
   text-align: center;
+  /* Adjusted for mobile later */
 }
 .image-text {
   font-size: 64px;
@@ -183,34 +184,38 @@ body {
     overflow-y: auto;
   }
   
-  /* Adjust container padding to fit on screen */
+  /* Reduce container padding */
   .container {
     padding: 10px;
   }
   
-  /* Scale text down by ~25% */
+  /* Make the title text about 10% smaller and move it upward */
+  .title-container {
+    margin-top: 0; /* Remove extra top margin */
+    padding-top: 0;
+  }
   .image-text {
-    font-size: 48px;  /* 25% smaller than 64px */
+    font-size: 58px; /* Approximately 10% smaller than 64px */
   }
   .image-text2 {
-    font-size: 33px;  /* 25% smaller than 44px */
+    font-size: 40px; /* Approximately 10% smaller than 44px */
   }
   .contract-text {
-    font-size: 21px;  /* 25% smaller than 28px */
+    font-size: 25px; /* Approximately 10% smaller than 28px */
   }
   
-  /* Reduce video size by about 30% */
+  /* Reduce video size by about 15% */
   .center-image {
-    max-width: 350px;  /* 30% smaller than 500px */
+    max-width: 425px;  /* 15% smaller than 500px; adjust as needed */
     width: 95%;
   }
   
-  /* Reduce chat-box vertical size by about 40% */
+  /* Reduce chat-box vertical size by about 40% remains unchanged */
   .chat-box {
     max-width: 480px;
     padding: 12px;
   }
   .chat-display {
-    height: 120px;  /* 40% smaller than 200px */
+    height: 120px;
   }
 }
