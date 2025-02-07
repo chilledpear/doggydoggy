@@ -194,10 +194,10 @@ body {
     padding-top: 0;
   }
   .image-text {
-    font-size: 30px;  /* 30% smaller than 64px */
+    font-size: 45px;  /* 30% smaller than 64px */
   }
   .image-text2 {
-    font-size: 25px;  /* 30% smaller than 44px */
+    font-size: 31px;  /* 30% smaller than 44px */
   }
   .contract-text {
     font-size: 20px;  /* 30% smaller than 28px */
@@ -205,16 +205,21 @@ body {
   
   /* Reduce video size by about 35% */
   .center-image {
-    max-width: 300px;  /* 35% smaller than 500px */
+    max-width: 325px;  /* 35% smaller than 500px */
     width: 95%;
   }
   
-  /* Chat-box vertical size remains as before (or adjust as needed) */
+  /* Chat-box vertical size remains as before */
   .chat-box {
     max-width: 480px;
     padding: 12px;
   }
   .chat-display {
     height: 120px;
+  }
+  
+  /* Prevent mobile auto-zoom by ensuring inputs are at least 16px */
+  #user-input, #send-btn {
+    font-size: 16px;
   }
 }
