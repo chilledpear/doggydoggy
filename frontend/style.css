@@ -194,10 +194,10 @@ body {
     padding-top: 0;
   }
   .image-text {
-    font-size: 45px;  /* 30% smaller than 64px */
+    font-size: 30px;  /* 30% smaller than 64px */
   }
   .image-text2 {
-    font-size: 31px;  /* 30% smaller than 44px */
+    font-size: 25px;  /* 30% smaller than 44px */
   }
   .contract-text {
     font-size: 20px;  /* 30% smaller than 28px */
@@ -205,7 +205,7 @@ body {
   
   /* Reduce video size by about 35% */
   .center-image {
-    max-width: 325px;  /* 35% smaller than 500px */
+    max-width: 300px;  /* 35% smaller than 500px */
     width: 95%;
   }
   
