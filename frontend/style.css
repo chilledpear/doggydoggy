@@ -82,7 +82,7 @@ body {
   gap: 20px;
 }
 
-/* TITLE CONTAINER – enlarged white text without stroke */
+/* TITLE CONTAINER – enlarged white text, no stroke */
 .title-container {
   text-align: center;
 }
@@ -172,49 +172,56 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 480px) {
-  /* Adjust background so more tiles appear */
+  /* Make the wallpaper show more tiles */
   body {
     background-size: 150px 150px;
   }
+  /* Set the entire viewport height and hide vertical scrolling */
   html, body {
     height: 100vh;
     overflow-y: hidden;
   }
+  /* Make the container a full-screen flex column so elements scale proportionally */
   .container {
     height: 100vh;
-    padding: 5px 5px;
+    padding: 5px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
+  /* Title section takes about 15% of viewport height */
   .title-container {
+    flex: 0 0 15vh;
     margin-top: 5px;
   }
-  /* Slightly reduce title text sizes on mobile */
+  /* Use viewport units for text sizes so they scale with screen size */
   .image-text {
-    font-size: 56px;
+    font-size: 6vh;
   }
   .image-text2 {
-    font-size: 38px;
+    font-size: 4.5vh;
   }
   .contract-text {
-    font-size: 24px;
+    font-size: 3vh;
   }
+  /* The image-box takes the remaining space for the video */
   .image-box {
-    flex-grow: 1;
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .center-image {
     max-width: 95%;
+    max-height: 45vh; /* limit video height relative to viewport */
   }
+  /* Chat-box takes a fixed height (around 20% of viewport height) */
   .chat-box {
+    flex: 0 0 20vh;
     max-width: 480px;
-    padding: 12px;
-    height: 140px;
+    padding: 8px;
   }
   .chat-display {
-    height: 70px;
+    height: calc(20vh - 40px);
   }
 }
