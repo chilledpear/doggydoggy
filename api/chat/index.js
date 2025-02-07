@@ -48,7 +48,7 @@ Predictable Responses:
   try {
     const completion = await openai.chat.completions.create({
       // To use a higher model, change the value below (e.g., "gpt-4", "gpt-3.5-turbo")
-      model: "gpt-4",
+      model: "gpt-3.5-turbo",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user", content: req.body.message }
