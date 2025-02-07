@@ -12,14 +12,16 @@ html, body {
 }
 
 /* LIGHT MODE */
-/* Use wallpaper.jpg as the blurry background */
+/* wallpaper.jpg is used as the blurry background */
 body {
   background: url("wallpaper.jpg") repeat;
+  /* Default background-size for desktop (can be left as is or adjusted) */
+  background-size: auto;
   color: #333;
   cursor: url("strategist-cursor-light.png"), auto;
 }
 
-/* Spotlight overlay element – covers the viewport */
+/* Spotlight overlay element for the reveal effect */
 #spotlight {
   position: fixed;
   top: 0;
@@ -30,7 +32,7 @@ body {
   z-index: 0;
 }
 
-/* The :before pseudo-element creates a circular window that reveals reveal.png */
+/* The :before pseudo-element creates a circular window revealing the clear image */
 #spotlight:before {
   content: "";
   position: absolute;
@@ -39,7 +41,6 @@ body {
   width: var(--size, 0);
   height: var(--size, 0);
   border-radius: 50%;
-  /* Use the clear image with the same tiling properties */
   background: url("reveal.png") repeat fixed;
   background-size: auto;
   transform: translate(-50%, -50%);
@@ -84,26 +85,26 @@ body {
   gap: 20px;
 }
 
-/* TITLE CONTAINER – enlarged white text with black stroke */
+/* TITLE CONTAINER - enlarged white text with black stroke */
 .title-container {
   text-align: center;
 }
 .image-text {
-  font-size: 55px;
+  font-size: 60px;
   font-weight: bold;
   color: white;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 5px black;
 }
 .image-text2 {
   font-size: 40px;
   font-weight: bold;
   color: white;
-  -webkit-text-stroke: 2px black;
+  -webkit-text-stroke: 4px black;
 }
 .contract-text {
   font-size: 25px;
   color: white;
-  -webkit-text-stroke: 0px black;
+  -webkit-text-stroke: 3px black;
 }
 
 /* IMAGE BOX */
@@ -175,21 +176,34 @@ body {
 }
 
 /* MOBILE RESPONSIVENESS */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 15px;
-    gap: 15px;
-  }
-  .center-image {
-    max-width: 300px;
-  }
-}
 @media screen and (max-width: 480px) {
-  .container {
-    padding: 10px;
-    gap: 10px;
+  /* Make the wallpaper image appear smaller (more tiles) */
+  body {
+    background-size: 150px 150px;
   }
+  
+  /* Reduce title text sizes */
+  .image-text {
+    font-size: 40px;
+    -webkit-text-stroke: 3px black;
+  }
+  .image-text2 {
+    font-size: 30px;
+    -webkit-text-stroke: 2px black;
+  }
+  .contract-text {
+    font-size: 18px;
+    -webkit-text-stroke: 2px black;
+  }
+  
+  /* Make the video a bit bigger relative to the container */
   .center-image {
-    max-width: 200px;
+    max-width: 90%;  /* Use more of the container's width */
+  }
+  
+  /* Reduce chat-box size by about 20% */
+  .chat-box {
+    max-width: 480px; /* 80% of original 600px */
+    padding: 16px;    /* reduce padding slightly */
   }
 }
