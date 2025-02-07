@@ -82,7 +82,7 @@ body {
   gap: 20px;
 }
 
-/* TITLE CONTAINER – enlarged white text, no stroke */
+/* TITLE CONTAINER – enlarged white text without stroke */
 .title-container {
   text-align: center;
 }
@@ -172,56 +172,45 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 480px) {
-  /* Make the wallpaper show more tiles */
+  /* Adjust background so more tiles appear */
   body {
     background-size: 150px 150px;
   }
-  /* Set the entire viewport height and hide vertical scrolling */
+  
+  /* Allow scrolling on mobile */
   html, body {
-    height: 100vh;
-    overflow-y: hidden;
+    height: auto;
+    overflow-y: auto;
   }
-  /* Make the container a full-screen flex column so elements scale proportionally */
+  
+  /* Adjust container padding to fit on screen */
   .container {
-    height: 100vh;
-    padding: 5px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 10px;
   }
-  /* Title section takes about 15% of viewport height */
-  .title-container {
-    flex: 0 0 15vh;
-    margin-top: 5px;
-  }
-  /* Use viewport units for text sizes so they scale with screen size */
+  
+  /* Scale text down by ~25% */
   .image-text {
-    font-size: 6vh;
+    font-size: 48px;  /* 25% smaller than 64px */
   }
   .image-text2 {
-    font-size: 4.5vh;
+    font-size: 33px;  /* 25% smaller than 44px */
   }
   .contract-text {
-    font-size: 3vh;
+    font-size: 21px;  /* 25% smaller than 28px */
   }
-  /* The image-box takes the remaining space for the video */
-  .image-box {
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  
+  /* Reduce video size by about 30% */
   .center-image {
-    max-width: 95%;
-    max-height: 45vh; /* limit video height relative to viewport */
+    max-width: 350px;  /* 30% smaller than 500px */
+    width: 95%;
   }
-  /* Chat-box takes a fixed height (around 20% of viewport height) */
+  
+  /* Reduce chat-box vertical size by about 40% */
   .chat-box {
-    flex: 0 0 20vh;
     max-width: 480px;
-    padding: 8px;
+    padding: 12px;
   }
   .chat-display {
-    height: calc(20vh - 40px);
+    height: 120px;  /* 40% smaller than 200px */
   }
 }
