@@ -1,64 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kate AI</title>
-  
-  <!-- Favicon -->
-  <link id="favicon" rel="icon" type="image/jpeg" href="kate-favicon.png" />
-  
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DuoLearn - Your Language Lesson</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="duo-favicon.png" type="image/png">
 </head>
-<body class="light-mode">
-  <!-- The wallpaper is applied as the background via CSS on the body -->
-
-  <!-- Spotlight overlay element for the reveal effect -->
-  <div id="spotlight"></div>
-  
-  <!-- TOP MENU -->
-  <div class="slim-menu">
-    <div class="social-links">
-      <a href="https://t.me/twitterkate" target="_blank">
-        <img src="telegram-logo.png" alt="Telegram">
-      </a>
-      <a href="https://x.com/Kate_Ai_" target="_blank">
-        <img src="twitter-logo.png" alt="Twitter">
-      </a>
-      <a href="https://www.pump.fun/" target="_blank">
-        <img src="dexscreener-logo.png" alt="Dexscreener">
-      </a>
-    </div>
-  </div>
-  
+<body>
   <div class="container">
-    <div class="title-container">
-      <div class="image-text">Kate AI</div>
-      <div class="image-text2">Use all my features in telegram</div>
-      <div class="contract-text">
-        Contract Address: 7ZgAmPCTz69SPxDhKVRxgFNAixcgB4rWkMFwpsNmpump
+    <!-- Header with progress bar and lives -->
+    <header class="lesson-header">
+      <div class="progress-bar">
+        <div class="progress"></div>
       </div>
-      <a href="https://t.me/KateDownload_bot" target="_blank" rel="noopener noreferrer">
-        <button class="button-21" role="button">Kate AI</button>
-      </a>
+      <div class="lives">❤️ 5</div>
+    </header>
+    
+    <!-- Lesson content -->
+    <div class="lesson-content">
+      <h1 class="lesson-title">Translate This Sentence</h1>
+      <div class="instruction">What does this sentence mean?</div>
+      <img src="duo-illustration.png" alt="Duo, your language coach" class="duo-illustration">
+      <div class="speech-box">
+        <span>🔊 "Bonjour, comment ça va?"</span>
+      </div>
+      <div class="word-options">
+        <div class="word">Hello</div>
+        <div class="word">Goodbye</div>
+        <div class="word">How are you?</div>
+        <div class="word">I'm fine</div>
+      </div>
+      <button id="submit-btn" class="submit-btn">Submit Answer</button>
     </div>
     
-    <!-- CENTER VIDEO: kate.mp4 looping on repeat -->
-    <div class="image-box">
-      <video id="center-video" class="center-image" autoplay loop muted playsinline>
-        <source src="kate.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    
-    <!-- CHAT BOX SECTION -->
-    <div class="chat-box">
-      <div id="chat-display" class="chat-display"></div>
-      <div class="input-container">
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button id="send-btn">Send</button>
-      </div>
-    </div>
+    <!-- Footer with a tip -->
+    <footer class="lesson-footer">
+      <span class="tip">Tip: Tap on the words to select your answer.</span>
+    </footer>
   </div>
   
   <script src="script.js"></script>
