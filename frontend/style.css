@@ -9,7 +9,9 @@ html, body {
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #dff7e2, #a1e3a1);
+  /* Arrange elements vertically */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -24,6 +26,7 @@ html, body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
+  margin-bottom: 15px; /* Add some space below container */
 }
 
 /* LESSON HEADER */
@@ -74,10 +77,8 @@ html, body {
   margin-bottom: 15px;
   color: #2d572c;
 }
-/* Increase the instructor picture by 40% if desired:
-   For example, change width from 100px to 140px */
 .duo-illustration {
-  width: 100px; /* Adjust to 140px for 40% bigger */
+  width: 100px;  /* Increase to 140px for 40% bigger if desired */
   height: auto;
   margin-bottom: 15px;
 }
@@ -139,12 +140,19 @@ html, body {
   color: #666;
 }
 
+/* CONTRACT ADDRESS */
+.contract-address {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
 /* FEEDBACK & ANIMATIONS */
 .fade-out {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
-
 @keyframes shake {
   0% { transform: translateX(0); }
   20% { transform: translateX(-10px); }
