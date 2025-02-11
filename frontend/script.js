@@ -184,13 +184,12 @@ const lessons = [
 
 let currentLessonIndex = 0;
 
-// Display the current lesson on page load
 window.addEventListener('DOMContentLoaded', displayLesson);
 
 function displayLesson() {
   const lesson = lessons[currentLessonIndex];
   
-  // Update lesson title and speech text
+  // Update the lesson title and speech text
   document.querySelector('.lesson-title').textContent = lesson.question;
   document.querySelector('.speech-box span').textContent = lesson.speech;
   
@@ -209,20 +208,16 @@ function displayLesson() {
     wordOptionsContainer.appendChild(optionDiv);
   });
   
-  // Update the progress bar with a complex animation effect
+  // Update the progress bar with animation
   const progressPercent = (currentLessonIndex / lessons.length) * 100;
   const progressEl = document.querySelector('.progress');
-  // Trigger a reflow to reset animation
   progressEl.classList.remove('progress-update');
-  void progressEl.offsetWidth;
+  void progressEl.offsetWidth; // force reflow to restart animation
   progressEl.classList.add('progress-update');
   progressEl.style.width = progressPercent + '%';
   
-  // Update progress text if available
-  const progressTextEl = document.querySelector('.progress-text');
-  if (progressTextEl) {
-    progressTextEl.textContent = Math.round(progressPercent) + '%';
-  }
+  // Update lessons completed counter in the .lives element
+  document.querySelector('.lives').textContent = `❤️ ${currentLessonIndex}/${lessons.length}`;
   
   // Clear any previous feedback message
   const existingFeedback = document.querySelector('.lesson-feedback');
@@ -248,7 +243,21 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     feedbackDiv.textContent = 'Correct!';
     feedbackDiv.style.color = 'green';
     
+    // Play sound effect after a correct answer
+    const audio = document.getElementById('shake-sound');
+    if (audio) {
+      audio.currentTime = 0;
+      audio.play();
+    }
+    
     document.querySelector('.lesson-content').appendChild(feedbackDiv);
+    
+    // Create a screen-wipe overlay effect before moving to next lesson
+    const container = document.querySelector('.container');
+    const overlay = document.createElement('div');
+    overlay.className = 'screen-wipe';
+    container.appendChild(overlay);
+    
     setTimeout(() => {
       feedbackDiv.classList.add('fade-out');
       setTimeout(() => {
@@ -266,15 +275,15 @@ document.getElementById('submit-btn').addEventListener('click', function() {
     feedbackDiv.style.color = 'red';
     
     document.querySelector('.lesson-content').appendChild(feedbackDiv);
-    // Add shake effect to the lesson content for wrong answers
+    
+    // Add shake effect for wrong answer
     const lessonContent = document.querySelector('.lesson-content');
     lessonContent.classList.add('shake');
-    // Play a sound effect (ensure "shake-sound.mp3" exists and is referenced in your HTML)
-    const audio = document.getElementById('shake-sound');
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play();
-    }
+    
+    // (Optional: play sound effect for wrong answer if desired)
+    // const audio = document.getElementById('shake-sound');
+    // if (audio) { audio.currentTime = 0; audio.play(); }
+    
     setTimeout(() => {
       feedbackDiv.classList.add('fade-out');
       setTimeout(() => {
@@ -287,12 +296,12 @@ document.getElementById('submit-btn').addEventListener('click', function() {
 
 // Spotlight effect using the :before technique
 document.addEventListener("mousemove", function(e) {
-  var spotlight = document.getElementById("spotlight");
+  const spotlight = document.getElementById("spotlight");
   spotlight.style.setProperty("--x", e.clientX + "px");
   spotlight.style.setProperty("--y", e.clientY + "px");
   spotlight.style.setProperty("--size", "300px");
 });
 document.addEventListener("mouseleave", function() {
-  var spotlight = document.getElementById("spotlight");
+  const spotlight = document.getElementById("spotlight");
   spotlight.style.setProperty("--size", "0px");
 });

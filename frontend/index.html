@@ -9,12 +9,13 @@
 </head>
 <body>
   <div class="container">
-    <!-- Header with progress bar and lives -->
+    <!-- Header with progress bar and lessons completed (lives) -->
     <header class="lesson-header">
       <div class="progress-bar">
         <div class="progress"></div>
+        <div class="progress-text"></div>
       </div>
-      <div class="lives">❤️ 5</div>
+      <div class="lives">❤️ 0/30</div>
     </header>
     
     <!-- Lesson content -->
@@ -26,10 +27,7 @@
         <span>🔊 "Bonjour, comment ça va?"</span>
       </div>
       <div class="word-options">
-        <div class="word">Hello</div>
-        <div class="word">Goodbye</div>
-        <div class="word">How are you?</div>
-        <div class="word">I'm fine</div>
+        <!-- Word options will be dynamically generated -->
       </div>
       <button id="submit-btn" class="submit-btn">Submit Answer</button>
     </div>
@@ -39,6 +37,12 @@
       <span class="tip">Tip: Tap on the words to select your answer.</span>
     </footer>
   </div>
+  
+  <!-- Audio for sound effect (used after a correct answer) -->
+  <audio id="shake-sound" src="shake-sound.mp3" preload="auto"></audio>
+  
+  <!-- Spotlight overlay element -->
+  <div id="spotlight"></div>
   
   <script src="script.js"></script>
 </body>
