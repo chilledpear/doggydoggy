@@ -3,182 +3,182 @@ const lessons = [
   {
     question: 'Translate: "Bonjour, comment ça va?"',
     speech: '🔊 Bonjour, comment ça va?',
-    options: ["Hello, how are you?", "Goodbye", "Please", "Excuse me"],
-    answer: "Hello, how are you?"
+    options: ["How many Lambos for your NFT?", "Sell kidneys for crypto", "I'm literally a rug pull", "Hello, how are you?"],
+    answer: "How many Lambos for your NFT?"
   },
   {
     question: 'Translate: "Merci beaucoup."',
     speech: '🔊 Merci beaucoup.',
-    options: ["Thank you very much.", "You're welcome", "I love you", "Good morning"],
-    answer: "Thank you very much."
+    options: ["Thanks for the rug pull", "Your mom buys SHIB", "I fumbled Bitcoin", "Thank you very much."],
+    answer: "Thanks for the rug pull"
   },
   {
     question: 'Translate: "Au revoir."',
     speech: '🔊 Au revoir.',
-    options: ["Goodbye", "Hello", "See you later", "Good night"],
-    answer: "Goodbye"
+    options: ["I'm shorting your marriage", "Go back to fiat peasant", "Rot in tradwife hell", "Goodbye"],
+    answer: "I'm shorting your marriage"
   },
   {
     question: 'Translate: "S\'il vous plaît."',
     speech: '🔊 S\'il vous plaît.',
-    options: ["Please", "Thank you", "Excuse me", "Sorry"],
-    answer: "Please"
+    options: ["Liquidate my student loans", "Sell plasma for DOGE", "I need bath salts", "Please"],
+    answer: "Liquidate my student loans"
   },
   {
     question: 'Translate: "Excusez-moi."',
     speech: '🔊 Excusez-moi.',
-    options: ["Excuse me", "I'm sorry", "Hello", "Goodbye"],
-    answer: "Excuse me"
+    options: ["Move, poor", "I sharted in DMs", "Your Bored Ape mid", "Excuse me"],
+    answer: "Move, poor"
   },
   {
     question: 'Translate: "Je m\'appelle Marie."',
     speech: '🔊 Je m\'appelle Marie.',
-    options: ["My name is Marie.", "I am 20 years old.", "I love reading.", "I live in Paris."],
-    answer: "My name is Marie."
+    options: ["I'm a degen gambler", "My OnlyFans mooned", "I eat crayons", "My name is Marie."],
+    answer: "I'm a degen gambler"
   },
   {
     question: 'Translate: "Comment t\'appelles-tu?"',
     speech: '🔊 Comment t\'appelles-tu?',
-    options: ["What is your name?", "How are you?", "Where are you from?", "What do you do?"],
-    answer: "What is your name?"
+    options: ["What's your OnlyFans?", "How much for feet pics?", "You into crypto-twinks?", "What is your name?"],
+    answer: "What's your OnlyFans?"
   },
   {
     question: 'Translate: "J\'habite à Paris."',
     speech: '🔊 J\'habite à Paris.',
-    options: ["I live in Paris.", "I live in London.", "I live in New York.", "I live in Rome."],
-    answer: "I live in Paris."
+    options: ["I YOLO'd into Dogecoin", "I live in my car", "Cum coin wen?", "I live in Paris."],
+    answer: "I YOLO'd into Dogecoin"
   },
   {
     question: 'Translate: "Je ne comprends pas."',
     speech: '🔊 Je ne comprends pas.',
-    options: ["I don't understand.", "I understand.", "I speak slowly.", "I know."],
-    answer: "I don't understand."
+    options: ["I can't read", "Wife's boyfriend knows", "Diamond hands brrr", "I don't understand."],
+    answer: "I can't read"
   },
   {
     question: 'Translate: "Parlez-vous anglais?"',
     speech: '🔊 Parlez-vous anglais?',
-    options: ["Do you speak English?", "Do you speak French?", "Do you speak Spanish?", "Do you speak German?"],
-    answer: "Do you speak English?"
+    options: ["Do you speak ape?", "Moon language only", "What's a book?", "Do you speak English?"],
+    answer: "Do you speak ape?"
   },
   {
     question: 'Translate: "Où sont les toilettes?"',
     speech: '🔊 Où sont les toilettes?',
-    options: ["Where is the bathroom?", "Where is the train station?", "Where is the restaurant?", "Where is the hotel?"],
-    answer: "Where is the bathroom?"
+    options: ["Where's the meth?", "Bathroom? I shitpost", "I made poopoo", "Where is bathroom?"],
+    answer: "Where's the meth?"
   },
   {
     question: 'Translate: "J\'ai faim."',
     speech: '🔊 J\'ai faim.',
-    options: ["I'm hungry.", "I'm thirsty.", "I'm tired.", "I'm happy."],
-    answer: "I'm hungry."
+    options: ["I need stimmy check", "Feed me tendies", "Where lambo?", "I'm hungry."],
+    answer: "I need stimmy check"
   },
   {
     question: 'Translate: "J\'ai soif."',
     speech: '🔊 J\'ai soif.',
-    options: ["I'm thirsty.", "I'm hungry.", "I'm tired.", "I'm bored."],
-    answer: "I'm thirsty."
+    options: ["I crave Brawndo", "Gamer girl bathwater", "Where's my Monster?", "I'm thirsty."],
+    answer: "I crave Brawndo"
   },
   {
     question: 'Translate: "Bonne journée!"',
     speech: '🔊 Bonne journée!',
-    options: ["Have a good day!", "Good night!", "See you tomorrow!", "Hello!"],
-    answer: "Have a good day!"
+    options: ["Go touch grass", "Cope harder", "Seethe mald", "Have good day!"],
+    answer: "Go touch grass"
   },
   {
     question: 'Translate: "Bonne nuit!"',
     speech: '🔊 Bonne nuit!',
-    options: ["Good night!", "Good morning!", "See you later!", "Thank you!"],
-    answer: "Good night!"
+    options: ["Delete browser history", "Cry in shower", "Pirate Disney+", "Good night!"],
+    answer: "Delete browser history"
   },
   {
     question: 'Translate: "À bientôt."',
     speech: '🔊 À bientôt.',
-    options: ["See you soon.", "Goodbye.", "Hello.", "Thank you."],
-    answer: "See you soon."
+    options: ["Cum coin wen?", "Get ratioed", "L + no bitches", "See you soon."],
+    answer: "Cum coin wen?"
   },
   {
     question: 'Translate: "Félicitations!"',
     speech: '🔊 Félicitations!',
-    options: ["Congratulations!", "I'm sorry.", "Good luck!", "Welcome!"],
-    answer: "Congratulations!"
+    options: ["Your crypto worthless", "You're adopted", "Skill issue", "Congratulations!"],
+    answer: "Your crypto worthless"
   },
   {
     question: 'Translate: "Je t\'aime."',
     speech: '🔊 Je t\'aime.',
-    options: ["I love you.", "I miss you.", "I hate you.", "I'm busy."],
-    answer: "I love you."
+    options: ["I love your NFT", "Pls be my parasocial gf", "Stan LoFi", "I love you."],
+    answer: "I love your NFT"
   },
   {
     question: 'Translate: "Où est la gare?"',
     speech: '🔊 Où est la gare?',
-    options: ["Where is the train station?", "Where is the bank?", "Where is the museum?", "Where is the library?"],
-    answer: "Where is the train station?"
+    options: ["Where's Uber Eats?", "Train? I have Tesla", "Where tendies?", "Where train station?"],
+    answer: "Where's Uber Eats?"
   },
   {
     question: 'Translate: "Combien ça coûte?"',
     speech: '🔊 Combien ça coûte?',
-    options: ["How much does it cost?", "What time is it?", "Where is the store?", "How many are there?"],
-    answer: "How much does it cost?"
+    options: ["How much feet pics?", "What's your body count?", "Wen free healthcare?", "How much cost?"],
+    answer: "How much feet pics?"
   },
   {
     question: 'Translate: "Je voudrais un café."',
     speech: '🔊 Je voudrais un café.',
-    options: ["I would like a coffee.", "I would like tea.", "I would like water.", "I would like juice."],
-    answer: "I would like a coffee."
+    options: ["I'll take Celsius sponsorship", "Gimme Adderall", "Where cocaine?", "I want coffee."],
+    answer: "I'll take Celsius sponsorship"
   },
   {
     question: 'Translate: "Pouvez-vous m\'aider?"',
     speech: '🔊 Pouvez-vous m\'aider?',
-    options: ["Can you help me?", "Where is the bathroom?", "What is your name?", "How old are you?"],
-    answer: "Can you help me?"
+    options: ["Can you Venmo me?", "Help me cheat on OnlyFans", "Call my parole officer", "Can you help me?"],
+    answer: "Can you Venmo me?"
   },
   {
     question: 'Translate: "J\'ai perdu mon chemin."',
     speech: '🔊 J\'ai perdu mon chemin.',
-    options: ["I lost my way.", "I am happy.", "I am lost.", "I am fine."],
-    answer: "I lost my way."
+    options: ["I'm literally rug pull", "Where my dad?", "Lost in Wendy's", "I lost my way."],
+    answer: "I'm literally rug pull"
   },
   {
     question: 'Translate: "Je suis fatigué."',
     speech: '🔊 Je suis fatigué.',
-    options: ["I am tired.", "I am hungry.", "I am happy.", "I am excited."],
-    answer: "I am tired."
+    options: ["Emotionally drained from crypto", "Tired of your face", "Need Adderall", "I'm tired."],
+    answer: "Emotionally drained from crypto"
   },
   {
     question: 'Translate: "Quelle heure est-il?"',
     speech: '🔊 Quelle heure est-il?',
-    options: ["What time is it?", "How much is it?", "Where is it?", "Why is it?"],
-    answer: "What time is it?"
+    options: ["Wen moon?", "Time to die", "It's Gamer Time™", "What time is it?"],
+    answer: "Wen moon?"
   },
   {
     question: 'Translate: "Il fait beau aujourd\'hui."',
     speech: '🔊 Il fait beau aujourd\'hui.',
-    options: ["The weather is nice today.", "It is raining.", "It is cold.", "It is hot."],
-    answer: "The weather is nice today."
+    options: ["Fed printing tendies", "Climate change fake", "Nice weather? Cope", "Weather nice today."],
+    answer: "Fed printing tendies"
   },
   {
     question: 'Translate: "Je voudrais réserver une table."',
     speech: '🔊 Je voudrais réserver une table.',
-    options: ["I would like to reserve a table.", "I would like to order food.", "I would like to cancel.", "I would like to leave."],
-    answer: "I would like to reserve a table."
+    options: ["Need wash crypto", "Table? I eat Doritos", "Reserve OnlyFans slot", "Reserve table."],
+    answer: "Need wash crypto"
   },
   {
     question: 'Translate: "Où est l\'aéroport?"',
     speech: '🔊 Où est l\'aéroport?',
-    options: ["Where is the airport?", "Where is the station?", "Where is the hotel?", "Where is the bus stop?"],
-    answer: "Where is the airport?"
+    options: ["Where exit liquidity?", "Jeffrey Epstein Island?", "My private jet where?", "Where airport?"],
+    answer: "Where exit liquidity?"
   },
   {
     question: 'Translate: "Pouvez-vous répéter, s\'il vous plaît?"',
     speech: '🔊 Pouvez-vous répéter, s\'il vous plaît?',
-    options: ["Can you repeat, please?", "Do you understand?", "Can you speak slowly?", "Are you sure?"],
-    answer: "Can you repeat, please?"
+    options: ["Say in ape language", "I'm lobotomized", "Too many benadryl", "Can repeat please?"],
+    answer: "Say in ape language"
   },
   {
     question: 'Translate: "C\'est délicieux!"',
     speech: '🔊 C\'est délicieux!',
-    options: ["It's delicious!", "It's terrible!", "It's expensive!", "It's free!"],
-    answer: "It's delicious!"
+    options: ["This financial advice", "Tastes like bug protein", "I licked battery", "It's delicious!"],
+    answer: "This financial advice"
   }
 ];
 
